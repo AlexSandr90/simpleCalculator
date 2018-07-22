@@ -5,33 +5,37 @@ let num1            = document.getElementById('firstNum');
 
     res             = document.getElementById('result');
 
-    getPlus         = document.getElementById('plus');
+    plus            = document.getElementById('plus');
 
-    getMinus        = document.getElementById('minus');
+    minus           = document.getElementById('minus');
 
-    getMultiply     = document.getElementById('multiply');
+    multiply        = document.getElementById('multiply');
 
-    getDivide       = document.getElementById('divide');
+    divide          = document.getElementById('divide');
+
+plus.addEventListener('click', getPlus);
+minus.addEventListener('click', getMinus);
+multiply.addEventListener('click', getMultiply);
+divide.addEventListener('click', getDivide);
 
 
-getPlus.onclick = function() {
-  res.value = +num1.value + +num2.value;
-  document.getElementById('result').innerHTML = res.value;
+
+
+
+function getPlus() {
+  res.value = Number(num1.value) + Number(num2.value);
+  res.innerHTML = res.value;
+};
+function getMinus() {
+  res.value = Number(num1.value) - Number(num2.value);
+  res.innerHTML = res.value;
+};
+function getMultiply() {
+  res.value = Number(num1.value) * Number(num2.value);
+  res.innerHTML = res.value;
+};
+function getDivide() {
+  res.value = Number(num1.value) / Number(num2.value);
+  res.innerHTML = res.value;
 }
 
-getMinus.onclick = function() {
-  res.value = +num1.value - +num2.value;
-  document.getElementById('result'.innerHTML = res.value);
-}
-
-getMultiply.onclick = function () {
-  res.value = +num1.value * +num2.value;
-  document.getElementById('result').innerHTML = res.value;
-}
-
-getDivide.onclick = function() {
-
-    res.value = +num1.value / +num2.value;
-    document.getElementById('result').innerHTML = res.value;
-
-}
